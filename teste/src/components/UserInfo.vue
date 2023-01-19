@@ -19,7 +19,6 @@ import AvatarArea from '@/components/widgets/AvatarArea.vue'
     padding: 22px 20px;
     background-color: #f0f4f9;
     border-radius: 10px;
-    width: 83%;
 }
 
 .user-name {
