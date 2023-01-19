@@ -1,13 +1,14 @@
 <template>
     <div class="avatar-circle">
-        <UserCircleIcon style="width: 50px; color: #a2b5cd"/>
+        <UserCircleIcon style="width: 50px; color: #a2b5cd" />
     </div>
 </template>
 <script setup>
 import { UserCircleIcon } from '@heroicons/vue/24/outline';
 </script>
 <style>
-.avatar-circle{
+.avatar-circle {
+    margin-right: 22px;
     display: flex;
     justify-content: center;
     align-items: center;

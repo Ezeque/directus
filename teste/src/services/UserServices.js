@@ -26,3 +26,9 @@ const adminOptions = reactive({
     provider : ref(null),
     externalIdentifier: ref(null)
 })
+
+export{
+    userDetails,
+    userPreferences,
+    adminOptions
+}
