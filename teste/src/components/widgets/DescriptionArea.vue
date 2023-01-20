@@ -18,8 +18,12 @@
 }
 
 #descriptionArea {
+    
+    border: 2px solid #d3dae4;
+    border-radius: 6px;
     resize: none;
     width: 100%;
     height: 164px;
+    outline: none;
 }
 </style>

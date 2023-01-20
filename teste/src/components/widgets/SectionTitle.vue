@@ -15,7 +15,6 @@ defineProps({
 })
 
 const textColor = (color)=>{
-    console.log(color)
     if(color == 'red'){
         return 'red-text'
     }

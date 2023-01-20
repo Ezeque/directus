@@ -24,6 +24,7 @@ import AvatarArea from '@/components/widgets/AvatarArea.vue'
 .user-name {
     color: #172940;
     margin: 0;
+    text-align: left;
 }
 
 .user-email{

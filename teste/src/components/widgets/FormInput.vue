@@ -13,7 +13,7 @@ import { ref } from 'vue';
 const props = defineProps({
     type: String,
     label: String,
-    table_field: String
+    table_field: Object
 })
 const inputValue = ref(props.table_field)
 </script>

@@ -5,7 +5,7 @@
             <select>
                 <option v-for="option in options" :key="option">{{ option }}</option>
             </select>
-            <slot name="icon">{{ slotContent }}</slot>
+            <slot name="icon"> </slot>
         </div>
     </div>
 </template>

@@ -27,7 +27,6 @@
         <FormInput label="Title" v-model="userData.title" :table_field="userData.title"/>
         <DescriptionArea />
         <BlockInput label="Tags" v-model="userData.tags" :table_field="userData.tags"/>
-        {{ userData }}
     </form>
 </template>
 <script>

@@ -10,9 +10,10 @@
           <template #icon> <UserIcon style="width:30px"/> </template>
         </SectionTitle>
         <UserPreferencesForm/>
-        <SectionTitle style="text-align:left" name="Admin Options">
+        <SectionTitle style="text-align:left" name="Admin Options" color="red">
           <template #icon> <ShieldCheckIcon style="width:30px"/> </template>
         </SectionTitle>
+        <AdminOptionsForm/>
       </div>
     </div>
   </div>
@@ -26,9 +27,11 @@ import AppSidebar from './AppSidebar.vue'
 import SectionTitle from './widgets/SectionTitle.vue';
 import { UserIcon, ShieldCheckIcon } from '@heroicons/vue/20/solid';
 import UserPreferencesForm from './UserPreferencesForm.vue'
+import AdminOptionsForm from './AdminOptionsForm.vue';
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
+
 <style scoped>
 #userPage{
   display: flex;

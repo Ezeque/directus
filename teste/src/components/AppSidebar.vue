@@ -3,13 +3,27 @@
         <div id="directus-section">
             <p>Directus</p>
         </div>
-        
+        <div class="menu-item" @click="tab = 'all_users'">
+            <FolderIcon style="color:#6644ff; width: 20px; padding: 10px;"/>
+            All Users
+        </div>
     </div>
 </template>
-<script>
+<script setup>
+import { FolderIcon } from '@heroicons/vue/24/outline';
+import { tab } from '@/services/TabsService';
 
 </script>
 <style>
+
+.menu-item{
+    padding: 10px;
+    color: #172940;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 #directus-section{
     font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
