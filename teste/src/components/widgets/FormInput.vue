@@ -2,19 +2,20 @@
     <div class="container">
         <h4 class="label-text"> {{ label }} </h4>
         <div class="input-field">
-            <input :type="type" :value="type != 'password'? info:'Password Securely Hashed'" :id="label" />
-            <slot name="icon" class="input-icon">{{ slotContent }}</slot>
+            <input :type="type" :id="label" v-model="inputValue" />
+            <slot name="icon" class="input-icon"> </slot>
         </div>
     </div>
 </template>
 <script setup>
-import { defineProps, ref } from 'vue';
-/* import { userDetails } from '@/services/UserServices'; */
-const info = ref('teste')
-defineProps({
+import { defineProps } from 'vue';
+import { ref } from 'vue';
+const props = defineProps({
     type: String,
     label: String,
+    table_field: String
 })
+const inputValue = ref(props.table_field)
 </script>
 <style>
 .label-text {
@@ -38,20 +39,20 @@ defineProps({
     border: 2px solid #d3dae4;
     border-radius: 6px;
     padding-left: 16px;
-    display:flex;
+    display: flex;
     font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.input-field input{
+.input-field input {
     height: 100%;
     width: 90%;
-    border: none ;
-    padding: 0; 
+    border: none;
+    padding: 0;
     margin: 0;
 }
 
-.input-field input:focus{
-    outline:none;
+.input-field input:focus {
+    outline: none;
 }
 
 .input-text {
