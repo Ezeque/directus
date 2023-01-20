@@ -3,6 +3,7 @@
         <div id="directus-section">
             <p>Directus</p>
         </div>
+        
     </div>
 </template>
 <script>

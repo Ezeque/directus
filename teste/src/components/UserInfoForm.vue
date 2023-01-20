@@ -12,7 +12,9 @@
         <FormInput label="Password" type="password"> 
             <template #icon> <LockClosedIcon style="width:30px; color:#a2b5cd"/> </template>
         </FormInput>
-        <BlockInput label="Avatar"/>
+        <BlockInput label="Avatar"> 
+            <template #icon>  </template>    
+        </BlockInput>
         <FormInput label="Location" />
         <FormInput label="Title" />
         <DescriptionArea/>

@@ -18,6 +18,7 @@ import { defineProps, ref } from 'vue';
 .label-text{
     color: #172940;
     margin: 0;
+    margin-bottom:10px;
 }
 .container{
     display: flex;
@@ -29,6 +30,10 @@ import { defineProps, ref } from 'vue';
 .input-field{
     width: 100%;
     height: 60px;
+}
+
+.input-field :focus{
+    outline: none;
 }
 
 .input-text{

@@ -6,6 +6,13 @@
       <div style="width: 83%;">
         <UserInfo />
         <UserInfoForm id="form-info" />
+        <SectionTitle style="text-align:left" name="User Preferences">
+          <template #icon> <UserIcon style="width:30px"/> </template>
+        </SectionTitle>
+        <UserPreferencesForm/>
+        <SectionTitle style="text-align:left" name="Admin Options">
+          <template #icon> <ShieldCheckIcon style="width:30px"/> </template>
+        </SectionTitle>
       </div>
     </div>
   </div>
@@ -16,6 +23,9 @@ import PageTitle from './PageTitle.vue'
 import UserInfo from './UserInfo.vue'
 import UserInfoForm from './UserInfoForm.vue';
 import AppSidebar from './AppSidebar.vue'
+import SectionTitle from './widgets/SectionTitle.vue';
+import { UserIcon, ShieldCheckIcon } from '@heroicons/vue/20/solid';
+import UserPreferencesForm from './UserPreferencesForm.vue'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

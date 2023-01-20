@@ -2,18 +2,19 @@
     <div class="container">
         <h4 class="label-text"> {{ label }} </h4>
         <div class="input-field">
-            <input :type="type" :value="type != 'password'? info:'Password Securely Hashed'" :id="label" />
-            <slot name="icon" class="input-icon">{{ slotContent }}</slot>
+            <select>
+                <option v-for="option in options" :key="option">{{ option }}</option>
+            </select>
+            <slot name="icon">{{ slotContent }}</slot>
         </div>
     </div>
 </template>
 <script setup>
-import { defineProps, ref } from 'vue';
-/* import { userDetails } from '@/services/UserServices'; */
-const info = ref('teste')
+import { defineProps } from 'vue';
 defineProps({
     type: String,
     label: String,
+    options: Array,
 })
 </script>
 <style>
@@ -33,7 +34,7 @@ defineProps({
 }
 
 .input-field {
-    width: 100%;
+    width: 87%;
     height: 60px;
     border: 2px solid #d3dae4;
     border-radius: 6px;
@@ -42,7 +43,7 @@ defineProps({
     font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.input-field input{
+.input-field select{
     height: 100%;
     width: 90%;
     border: none ;
