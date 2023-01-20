@@ -1,3 +1,4 @@
+import axios from "axios";
 import { reactive, ref } from "vue";
 
 const userDetails = reactive({
@@ -27,8 +28,20 @@ const adminOptions = reactive({
     externalIdentifier: ref(null)
 })
 
+// Get an user in the database by its id
+const getUser = (id) => {
+    axios.get(`${process.env.DIRECTUS_URL}/items/users/${id}`)
+}
+
+// Creates an user in the database based on a object with its parameters
+const creatUser = (parameters) => {
+    axios.post(`${process.env.DIRECTUS_URL}/items/users`, parameters)
+}
+
 export{
     userDetails,
     userPreferences,
-    adminOptions
+    adminOptions,
+    getUser,
+    creatUser
 }
