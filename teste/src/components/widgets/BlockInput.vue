@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <slot name="icon"></slot>
         <h4 class="label-text"> {{label}} </h4>
         <input class="input-field" :type="type" :value="info" :id="label"/>
     </div>
